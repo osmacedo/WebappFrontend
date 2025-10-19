@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tienda Tech - Inicio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+  <main>
+    <div class="hero">
+      <h1>Bienvenido a Tienda Tech</h1>
+      <p>Explora lo último en computadoras, laptops, celulares y más.</p>
+    </div>
+    <section class="anadir-productos" id="add-productos-container">
+        <h2>Añadir Nuevos Productos</h2>
+        <form id="add-product-form">
+            <input type="text" id="product-name" placeholder="Nombre del Producto" required />
+            <input type="text" id="product-description" placeholder="Descripción del Producto" />
+            <input type="text" id="product-price" placeholder="Precio del Producto" />
+            <input type="text" id="product-stock" placeholder="Stock del Producto" />
+            <input type="text" id="product-sku" placeholder="SKU del Producto" required />
+
+            <button type="submit" id="btn-anadir-producto">Añadir Producto</button>
+
+        </form>
+    </section>
+    <section class="productos" id="productos-container">
+      <!-- Aquí van los productos dinámicos -->
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Tienda Tech - Todos los derechos reservados</p>
+    <p>
+      <i class="fas fa-envelope"></i> contacto@tiendatech.com |
+      <i class="fas fa-phone"></i> +51 987 654 321
+    </p>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
