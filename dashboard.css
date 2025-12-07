@@ -191,6 +191,37 @@ body {
     color: var(--primary-color);
 }
 
+.card-producto-admin {
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-producto-admin img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card-producto-admin h3 {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.card-producto-admin p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.card-producto-admin p strong {
+  color: #0d6efd;
+}
+
 /* Section Visibility */
 .section {
     display: block;
@@ -226,6 +257,26 @@ body {
 
 .form-group {
     margin-bottom: 15px;
+}
+
+form input, form textarea, form button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #0b5ed7;
 }
 
 label {
@@ -381,6 +432,14 @@ select {
     background-color: #f0f0f0;
 }
 
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
 /* Botón Eliminar */
 .btn-eliminar {
     padding: 8px 14px;
@@ -406,6 +465,18 @@ select {
 
 .btn-eliminar:active {
     transform: scale(0.95);
+}
+
+.btn-editar {
+  margin-top: 10px;
+  background-color: #929000;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 /* Botón Modificar */
@@ -465,4 +536,31 @@ select {
     border-radius: 8px;
     background-color: #f2f2f2;
     margin-bottom: 12px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 350px;
+  margin: 10% auto;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 22px;
+  float: right;
 }

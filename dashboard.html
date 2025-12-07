@@ -88,38 +88,38 @@
                         </div>
                     </div>
                 </div>
-                <div class="section hidden" id="productos-section">
+                <div class="section" id="productos-section">
                     <h1>Gestión de Productos</h1>
                     
                     <div class="form-container">
                         <h2>Agregar Nuevo Producto</h2>
-                        <form id="producto-form">
+                        <form id="add-product-form">
                           <div class="form-columns">
                             <!-- First column -->
                             <div class="form-column">
                               <div class="form-group">
-                                <label for="producto-name">Nombre:</label>
-                                <input type="text" id="producto-name" required>
+                                <label for="product-name">Nombre:</label>
+                                <input type="text" id="product-name" required>
                               </div>
                               <div class="form-group">
-                                <label for="producto-description">Descripción:</label>
-                                <textarea id="producto-description" class="textarea-ajustada" required></textarea>
+                                <label for="product-description">Descripción:</label>
+                                <textarea id="product-description" class="textarea-ajustada" required></textarea>
                               </div>
                             </div>
                         
                             <!-- Second column -->
                             <div class="form-column">
                               <div class="form-group">
-                                <label for="producto-price">Precio:</label>
-                                <input type="number" id="producto-price" step="0.01" required>
+                                <label for="product-price">Precio:</label>
+                                <input type="number" id="product-price" step="0.01" required>
                               </div>
                               <div class="form-group">
-                                <label for="producto-stock">Stock:</label>
-                                <input type="number" id="producto-stock" required>
+                                <label for="product-stock">Stock:</label>
+                                <input type="number" id="product-stock" required>
                               </div>
                               <div class="form-group">
-                                <label for="producto-sku">SKU:</label>
-                                <input type="text" id="producto-sku" required>
+                                <label for="product-sku">SKU:</label>
+                                <input type="text" id="product-sku" required>
                               </div>
                             </div>
                         
@@ -141,7 +141,7 @@
                             </div>
                           </div>
                         
-                          <button type="submit" class="btn-primary" id="btnGuardar">Guardar Producto</button>
+                          <button type="submit" class="btn-primary" id="btn-anadir-producto">Añadir Producto</button>
                         </form>
                         
                     </div>
@@ -155,6 +155,44 @@
                             </div>
                         </div>
                         <ul id="productos-lista"></ul>
+                        <div class="hero">
+                            <h1>Panel de Administración</h1>
+                            <p>Gestiona tus productos fácilmente desde aquí.</p>
+                            <section class="productos" id="productos-container-admin">
+                            <!-- Aquí van los productos dinámicos -->
+                            </section>
+                        </div>
+                        
+                        <!-- MODAL EDITAR PRODUCTO -->
+                        <div id="modal-editar" class="modal">
+                            <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Editar Producto</h2>
+
+                            <form id="form-edit-product">
+
+                                <input type="hidden" id="edit-id" />
+
+                                <label>Nombre:</label>
+                                <input type="text" id="edit-name" required />
+
+                                <label>Descripción:</label>
+                                <textarea id="edit-description"></textarea>
+
+                                <label>Precio:</label>
+                                <input type="number" id="edit-price" step="0.01" />
+
+                                <label>Stock:</label>
+                                <input type="number" id="edit-stock" />
+
+                                <label>SKU:</label>
+                                <input type="text" id="edit-sku" required />
+
+                                <button type="submit" class="btn-guardar">Guardar Cambios</button>
+                                <button type="button" id="cerrar-modal">Cancelar</button>
+                            </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="section hidden" id="ventas-section">
@@ -172,6 +210,11 @@
             </div>
         </div>
     </div>
+
+    <footer>    
+
+    </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="dashboard.js"></script>
 </body>

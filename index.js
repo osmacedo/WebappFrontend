@@ -208,7 +208,7 @@ formEditar.addEventListener("submit", async (e) => {
   console.log("Actualizado:", data);
 
   modal.style.display = "none";
-  location.reload();
+  location.href = "#productos";
 });
 
 
