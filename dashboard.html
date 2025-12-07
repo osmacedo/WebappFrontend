@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medusa Tienda</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Mi tienda</h2>
+            </div>
+            <ul class="menu">
+                <li class="active">
+                    <a href="#inicio">
+                        <i class="fas fa-home"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#productos" id="productos-link">
+                        <i class="fas fa-box"></i>
+                        <span>Productos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#ventas">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Ventas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#usuarios">
+                        <i class="fas fa-users"></i>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#configuracion">
+                        <i class="fas fa-cog"></i>
+                        <span>Configuración</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="#cerrar-sesion" id="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Cerrar Sesión</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <div class="toggle-btn" id="toggleBtn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="user-info" id="user-info">
+                    <!-- User info will be populated by JavaScript -->
+                </div>
+            </div>
+            <div class="content">
+                <div class="section" id="inicio-section">
+                    <h1>Inicio</h1>
+                    <div class="dashboard-cards">
+                        <div class="card productos-card">
+                            <div class="card-icon"><i class="fas fa-box"></i></div>
+                            <div class="card-info">
+                                <h3>Total Productos</h3>
+                                <p>250</p>
+                            </div>
+                        </div>
+                        <div class="card productos-card">
+                            <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="card-info">
+                                <h3>Ventas Mensuales</h3>
+                                <p>$15,250</p>
+                            </div>
+                        </div>
+                        <div class="card productos-card">
+                            <div class="card-icon"><i class="fas fa-users"></i></div>
+                            <div class="card-info">
+                                <h3>Usuarios Activos</h3>
+                                <p>120</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section hidden" id="productos-section">
+                    <h1>Gestión de Productos</h1>
+                    
+                    <div class="form-container">
+                        <h2>Agregar Nuevo Producto</h2>
+                        <form id="producto-form">
+                          <div class="form-columns">
+                            <!-- First column -->
+                            <div class="form-column">
+                              <div class="form-group">
+                                <label for="producto-name">Nombre:</label>
+                                <input type="text" id="producto-name" required>
+                              </div>
+                              <div class="form-group">
+                                <label for="producto-description">Descripción:</label>
+                                <textarea id="producto-description" class="textarea-ajustada" required></textarea>
+                              </div>
+                            </div>
+                        
+                            <!-- Second column -->
+                            <div class="form-column">
+                              <div class="form-group">
+                                <label for="producto-price">Precio:</label>
+                                <input type="number" id="producto-price" step="0.01" required>
+                              </div>
+                              <div class="form-group">
+                                <label for="producto-stock">Stock:</label>
+                                <input type="number" id="producto-stock" required>
+                              </div>
+                              <div class="form-group">
+                                <label for="producto-sku">SKU:</label>
+                                <input type="text" id="producto-sku" required>
+                              </div>
+                            </div>
+                        
+                            <!-- Third column -->
+                            <div class="form-column">
+                              <div class="form-group">
+                                <label for="producto-categories">Categorías:</label>
+                                <select id="producto-categories" multiple>
+                                  <option value="1">Computadora</option>
+                                  <option value="2">Laptop</option>
+                                  <option value="3">Celular</option>
+                                  <option value="4">Tablet</option>
+                                </select>
+                              </div>
+                              <div class="form-group checkbox">
+                                <label for="is-active">Activo:</label>
+                                <input type="checkbox" id="is-active" checked>
+                              </div>
+                            </div>
+                          </div>
+                        
+                          <button type="submit" class="btn-primary" id="btnGuardar">Guardar Producto</button>
+                        </form>
+                        
+                    </div>
+                    
+                    <div class="productos-lista-container">
+                        <div class="productos-header">
+                            <h2>Lista de Productos</h2>
+                            <div class="search-container">
+                                <input type="text" id="producto-search" placeholder="Buscar productos...">
+                                <button id="search-btn"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <ul id="productos-lista"></ul>
+                    </div>
+                </div>
+                <div class="section hidden" id="ventas-section">
+                    <h1>Ventas</h1>
+                    <p>Información de ventas aquí.</p>
+                </div>
+                <div class="section hidden" id="usuarios-section">
+                    <h1>Usuarios</h1>
+                    <p>Gestión de usuarios aquí.</p>
+                </div>
+                <div class="section hidden" id="configuracion-section">
+                    <h1>Configuración</h1>
+                    <p>Opciones de configuración aquí.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

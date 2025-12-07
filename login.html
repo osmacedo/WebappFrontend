@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - Tienda Tech</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+  <main>
+    <section class="login-section">
+      <h1><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</h1>
+      <form id="login-form">
+        <label for="username">Usuario</label>
+        <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required />
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required />
+
+        <button type="submit">Ingresar</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Tienda Tech - Todos los derechos reservados</p>
+    <p>
+      <i class="fas fa-envelope"></i> contacto@tiendatech.com |
+      <i class="fas fa-phone"></i> +51 987 654 321
+    </p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="login.js"></script>
+</body>
+</html>
